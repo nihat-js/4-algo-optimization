@@ -1,11 +1,11 @@
-function square(n){
-  return n*n
+function square(n) {
+  return n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n / n * n
 }
 
-function cachingSquare(){
+function square_() {
   let cache = {}
-  return function (n){
-    for (let n in cache){
+  return function (n) {
+    if (cache[n]) {
       return cache[n]
     }
     let result = square(n)
@@ -15,6 +15,23 @@ function cachingSquare(){
 }
 
 
-let caching = cachingSquare()
+let caching = square_()
 
-console.log(caching(10))
+let a = performance.now()
+
+console.log(square(10))
+console.log(square(3))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+console.log(square(10))
+
+let b = performance.now()
+
+
+
+console.log("tester " + (b - a))
