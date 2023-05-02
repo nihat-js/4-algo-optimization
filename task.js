@@ -20,11 +20,10 @@ function findIntersection(arr1, arr2) {
   let result = []
   let i = 0, j = 0
 
-  let pointer 
+  let pointer = 0
 
   while (i < arr1.length) {
-    console.log("i is " + i)
-
+    console.log("i and j" , i , j)
     if (arr1[i] == arr2[j]) {
       result.push(arr1[i])
       let pointer = j
@@ -41,23 +40,18 @@ function findIntersection(arr1, arr2) {
       j++
     }
 
-    // else if (j <arr2.length-1){
-    //   j++
-    // }else if (j < arr2.length){
-    //   j = 0
-    //   i++
-    // }
+  
   }
 
   return result
 
 }
 
-let arr1 = [1, 2, 5, 15, 25, 39, 62, 100, 500]
+let arr1 = [1, 2, 5, 15, 25, 39, 62, 300, 500]
 
 let arr2 = [3, 5, 12, 59, 72, 120, 240, 300, 700, 1200]
 
-console.log(findIntersection(arr2, arr1))
+console.log("intersection of "+ findIntersection(arr2, arr1))
 
 
 // Write a function that checks if a given string is a palindrome. Implement a check to skip further comparisons once a mismatch is found.
@@ -88,7 +82,7 @@ function checkPrime(x) {
 }
 
 
-console.log(checkPrime(101))
+// console.log(checkPrime(101))
 
 // console.log(palindromeChecker_("warrawa"))
 
@@ -115,4 +109,4 @@ function nonRepeated(str) {
     }
   }
 }
-console.log(nonRepeated("azera"))
+// console.log(nonRepeated("azera"))
