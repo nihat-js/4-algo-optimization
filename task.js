@@ -1,17 +1,24 @@
 
 // 1 5 10 
 // 2 3 9 12
-// for (let i = 0; i < arr1.length; i++) {
-//   for (let j = 0; j < arr2.length; j++) {
-//     if (arr1[i] == arr2[j]) {
-//       result.push(arr1[i])
-//       break;
-//     } else if (arr2[j] > arr1[i]) {
-//       break
-//     }
-//   }
-// }
-// return result
+
+function findIntersection_(){
+  let result = []
+for (let i = 0; i < arr1.length; i++) {
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1[i] == arr2[j]) {
+      result.push(arr1[i])
+      break;
+    } else if (arr2[j] > arr1[i]) {
+      break
+    }
+  }
+}
+return result
+}
+
+
+
 
 function findIntersection(arr1, arr2) {
   if (arr1.length == 0 || arr2.length == 0) {
@@ -51,10 +58,9 @@ let arr1 = [1, 2, 5, 15, 25, 39, 62, 300, 500]
 
 let arr2 = [3, 5, 12, 59, 72, 120, 240, 300, 700, 1200]
 
-console.log("intersection of "+ findIntersection(arr2, arr1))
+console.log("intersection of "+ findIntersection_(arr2, arr1))
 
 
-// Write a function that checks if a given string is a palindrome. Implement a check to skip further comparisons once a mismatch is found.
 
 
 function palindromeChecker(text) {
